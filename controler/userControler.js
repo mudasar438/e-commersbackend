@@ -12,7 +12,7 @@ exports.addUser = async(req , res) => {
     try{
         await newUser.save();
         console.log("user added to the database");
-        // res.send(newUser);
+       
         res.status(201).json(newUser)
 
     } catch (err){
@@ -27,7 +27,7 @@ exports.getUsers = async(req , res) => {
     
     try{
         const users = await UserModal.find();
-        console.log("all User Get" ,users)
+        // console.log("all User Get" ,users)
         res.status(200).json(users)
         
 
@@ -37,7 +37,7 @@ exports.getUsers = async(req , res) => {
 
     }
 } 
-
+  
 // ----------- GET USER BY ID  or EDIT -----------
 exports.getUserById = async(req , res) => {
     const eid = req.params.id;

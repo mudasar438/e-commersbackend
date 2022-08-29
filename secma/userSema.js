@@ -9,6 +9,7 @@ const userScema = new mongoose.Schema({
     detail: String,
     squirFeet: String,
     price: String,
+    housImg:String
     
    
    
